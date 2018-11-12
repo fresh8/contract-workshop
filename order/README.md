@@ -29,9 +29,9 @@ Example response:
 }
 ```
 
-### `/products/{id}`
+### `/order/{id}`
 
-Single product.
+Single order.
 
 Example response:
 

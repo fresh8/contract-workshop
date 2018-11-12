@@ -23,9 +23,9 @@ Example response:
 ]
 ```
 
-### `/products/{id}`
+### `/customers/{id}`
 
-Single product.
+Single customer.
 
 Example response:
 
