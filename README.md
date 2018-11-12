@@ -2,7 +2,23 @@
 
 This repository is the basis for a Fresh8 Contract Testing workshop using [Pact](https://docs.pact.io/).
 
+## Overview
+
+Some fool decided to create a single page web app admin interface to a very weird
+purchasing system. It is roughly laid out as shown in the diagram below, however
+who knows if it's up to date, or even right.
+
 > ![Layout](assets/ContractTestLayout.png)
+
+Unfortunately, someone else threw this into production, so it's what we've got to
+work with. Based on the mounting backlog, the overloaded kanban board, and the Jira
+server fire that is imminent, it seems wise to sugar coat our current setup with
+some contract testing to ensure all our new glorious features and bug fixes don't
+set everything else ablaze.
+
+More information will be provided by a lead engineer at the point everything kicks
+off. Please do ask questions, raise issues with the core codebase on this project,
+and generally have fun learning!
 
 ## Access
 
