@@ -6,12 +6,12 @@ This repository is the basis for a Fresh8 Contract Testing workshop using [Pact]
 
 ## Access
 
-| Service  | URL                   |
-| -------- | --------------------- |
-| Customer | http://localhost:3003 |
-| Product  | http://localhost:3002 |
-| Order    | http://localhost:3001 |
-| Admin    | http://localhost:3000 |
+| Service  | URL                   | README                       |
+| -------- | --------------------- | ---------------------------- |
+| Customer | http://localhost:3003 | [README](customer/README.md) |
+| Product  | http://localhost:3002 | [README](product/README.md)  |
+| Order    | http://localhost:3001 | [README](order/README.md)    |
+| Admin    | http://localhost:3000 | [README](admin/README.md)    |
 
 ## Setup
 
