@@ -15,10 +15,18 @@ This repository is the basis for a Fresh8 Contract Testing workshop using [Pact]
 
 ## Setup
 
-The project uses Docker for development, however there are a couple of nuances depending on the service.
-
-### Quick Start
+The project uses Docker for development, the following command should get you up and running relatively quickly:
 
 ```sh
 docker-compose up
 ```
+
+### Running Commands
+
+To run commands on each machine, for installing packages or running tools, you can use the following:
+
+```sh
+docker-compose run customer dep ensure
+```
+
+In this example, `customer` is the container, and `dep ensure` is the command being run.
