@@ -1,0 +1,39 @@
+version: '2'
+services:
+
+  admin:
+    image: node:carbon-alpine
+    working_dir: /var/www
+    volumes:
+      - ./admin:/var/www
+    ports:
+      - 3000:3000
+    environment:
+      - HOST=0.0.0.0
+    command: sh -c "yarn install && yarn dev"
+
+  customer:
+    build:
+      context: ./customer
+    volumes:
+      - ./customer:/go/src/github.com/fresh8/contract-workshop/customer
+    ports:
+      - 3003:3003
+
+  order:
+    image: node:carbon-alpine
+    working_dir: /var/www
+    volumes:
+      - ./order:/var/www
+    ports:
+      - 3001:3001
+    command: sh -c "yarn install && yarn dev"
+
+  product:
+    image: node:carbon-alpine
+    working_dir: /var/www
+    volumes:
+      - ./product:/var/www
+    ports:
+      - 3002:3002
+    command: sh -c "yarn install && yarn dev"

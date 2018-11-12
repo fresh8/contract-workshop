@@ -1,0 +1,26 @@
+{
+    "name": "product-api",
+    "version": "1.0.0",
+    "description": "Product API",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "dev": "nodemon index.js | bunyan",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Dom Udall",
+    "license": "ISC",
+    "devDependencies": {
+      "@pact-foundation/pact": "^5.9.0",
+      "nodemon": "^1.17.2"
+    },
+    "dependencies": {
+      "body-parser": "^1.15.0",
+      "bunyan": "^1.6.0",
+      "express": "^4.13.3",
+      "method-override": "^2.3.5",
+      "morgan": "^1.6.1",
+      "striptags": "^3.0.1",
+      "node-fetch": "^2.1.2"
+    }
+  }
