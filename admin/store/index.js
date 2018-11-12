@@ -27,9 +27,7 @@ const createStore = () => {
           async getProducts({ commit }) {
             let { data } = await this.$axios.get('http://localhost:3002/products')
 
-            console.log(data)
             commit('setProducts', data)
-            console.log(data)
           }
         }
       },
@@ -63,6 +61,32 @@ const createStore = () => {
             }
 
             commit('setOrders', orders)
+          }
+        }
+      },
+      customers: {
+        state: () => ({
+          list: []
+        }),
+        mutations: {
+          add(state, { text }) {
+            state.list.push({
+              text,
+              done: false
+            })
+          },
+          remove(state, { customer }) {
+            state.list.splice(state.list.indexOf(customer), 1)
+          },
+          setCustomers(state, data) {
+            state.list = data
+          }
+        },
+        actions: {
+          async getCustomers({ commit }) {
+            let { data } = await this.$axios.get('http://localhost:3003/customers')
+
+            commit('setCustomers', data)
           }
         }
       }
