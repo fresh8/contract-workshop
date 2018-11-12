@@ -1,3 +1,3 @@
 # Contract Test Workshop
 
-> ![Layout](../assets/ContractTestLayout.png)
+> ![Layout](assets/ContractTestLayout.png)
