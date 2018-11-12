@@ -3,20 +3,21 @@
     <div>
       <logo/>
       <h1 class="title">
-        admin
+        PMA
       </h1>
       <h2 class="subtitle">
-        My phenomenal Nuxt.js project
+        Purchasing Management Admin
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+        <nuxt-link
+          to="/customers"
+          class="button--green">Customers</nuxt-link>
+        <nuxt-link
+          to="/products"
+          class="button--green">Products</nuxt-link>
+        <nuxt-link
+          to="/orders"
+          class="button--green">Orders</nuxt-link>
       </div>
     </div>
   </section>

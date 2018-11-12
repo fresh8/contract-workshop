@@ -18,7 +18,7 @@ const orders = {
 
 module.exports = {
   getAll: function() {
-      return orders;
+      return orders
   },
 
   getByID: function(id) {
