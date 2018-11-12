@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
 	"github.com/fresh8/contract-workshop/customer/client/order"
@@ -24,7 +25,11 @@ func main() {
 	r.HandleFunc("/customers/{id:[0-9]+}", customerHandler)
 	http.Handle("/", r)
 
-	http.ListenAndServe(":3003", nil)
+	headersOk := handlers.AllowedHeaders([]string{"X-Requested-With"})
+	originsOk := handlers.AllowedOrigins([]string{"*"})
+	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
+
+	http.ListenAndServe(":3003", handlers.CORS(originsOk, headersOk, methodsOk)(r))
 }
 
 func customersHandler(w http.ResponseWriter, r *http.Request) {
