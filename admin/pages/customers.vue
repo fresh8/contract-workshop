@@ -11,14 +11,16 @@
           <dt>Favourite Shape</dt>
           <dd>{{ customer.favourite_shape }}</dd>
         </dl>
-        <h4>Orders</h4>
-        <ul>
-          <li
-            v-for="order in customer.orders"
-            :key="order.id">
-          Products Ordered: {{ order.products.length }} (&pound;{{ order.total }})
-          </li>
-        </ul>
+        <div v-if="customer.orders && customer.orders.length > 0">
+          <h4>Orders</h4>
+          <ul>
+            <li
+              v-for="order in customer.orders"
+              :key="order.id">
+              Products Ordered: {{ order.products.length }} (&pound;{{ order.total }})
+            </li>
+          </ul>
+        </div>
       </li>
     </ul>
 
