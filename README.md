@@ -46,3 +46,14 @@ docker-compose run customer dep ensure
 ```
 
 In this example, `customer` is the container, and `dep ensure` is the command being run.
+
+## Workshopping
+
+Clone this repo, and create a new branch for your pair/mob.
+
+### Resources
+
+[Getting Started with Pact](https://docs.pact.io/getting_started)
+[JS Quickstart Guide](https://docs.pact.io/implementation_guides/javascript)
+[Pact JS](https://github.com/pact-foundation/pact-js)
+[Pact Go](https://github.com/pact-foundation/pact-go)
